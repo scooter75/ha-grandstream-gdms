@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/scooter75/ha-grandstream-gdms/main/docs/assets/grandstream.svg" alt="Grandstream Logo" width="140" />
+  <img src="https://raw.githubusercontent.com/scooter75/ha-grandstream-gdms/main/docs/assets/grandstream.png" alt="Grandstream Logo" width="140" />
 </p>
 
 # Grandstream GDMS for Home Assistant
