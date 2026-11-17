@@ -100,11 +100,4 @@ data:
 ```
 
 ---
-
-## Publishing Checklist for `scooter75`
-
-1. Create repository `https://github.com/scooter75/ha-grandstream-gdms`.
-2. Extract and push all files from this package to `main` and create a GitHub Release tagged `v1.0.0`.
-3. Ensure GitHub Actions (`HACS Validation` and `Hassfest Validation`) pass green.
-4. *(Optional)* Submit `docs/assets/icon.png` (`256x256`), `docs/assets/icon@2x.png` (`512x512`), and `docs/assets/logo.png` to [`home-assistant/brands`](https://github.com/home-assistant/brands) under `custom_integrations/grandstream_gdms/`.
-5. *(Optional)* Submit `scooter75/ha-grandstream-gdms` to [`hacs/default`](https://github.com/hacs/default).
+  
