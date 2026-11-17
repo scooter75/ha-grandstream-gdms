@@ -1,0 +1,8 @@
+{
+  "name": "Grandstream GDMS",
+  "homeassistant": "2024.6.0",
+  "render_readme": true,
+  "domains": [
+    "grandstream_gdms"
+  ]
+}
