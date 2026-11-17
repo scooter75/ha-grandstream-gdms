@@ -1,0 +1,43 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Grandstream GDMS",
+        "description": "Enter your GDMS API Developer credentials (found in GDMS under Others -> API Developer) and GDMS account login.",
+        "data": {
+          "region": "GDMS Regional Server",
+          "client_id": "API Client ID",
+          "client_secret": "API Secret Key",
+          "username": "GDMS Username",
+          "password": "GDMS Password",
+          "scan_interval": "Polling Interval (seconds)"
+        }
+      },
+      "org": {
+        "title": "Select GDMS Organization",
+        "description": "Multiple organizations were found on your GDMS account. Choose which organization to monitor.",
+        "data": {
+          "org_id": "Organization"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Unable to connect to the GDMS Cloud API. Verify your network and regional server.",
+      "invalid_auth": "Invalid GDMS credentials, API Client ID, or Secret Key.",
+      "unknown": "Unexpected error occurred while connecting to GDMS."
+    },
+    "abort": {
+      "already_configured": "This Grandstream GDMS account is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Grandstream GDMS Options",
+        "data": {
+          "scan_interval": "Polling Interval (seconds)"
+        }
+      }
+    }
+  }
+}

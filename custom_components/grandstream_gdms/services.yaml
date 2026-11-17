@@ -1,0 +1,72 @@
+reboot_device:
+  name: Reboot Device
+  description: Schedule an immediate reboot task on a Grandstream device via GDMS.
+  fields:
+    device_id:
+      name: Device
+      description: Home Assistant device registered under Grandstream GDMS.
+      selector:
+        device:
+          integration: grandstream_gdms
+    mac:
+      name: MAC Address
+      description: Device MAC address (e.g., 00:0B:82:XX:XX:XX) if not selecting a device.
+      example: "00:0B:82:AA:BB:CC"
+      selector:
+        text:
+
+push_config:
+  name: Push Configuration
+  description: Trigger an immediate GDMS configuration sync/push to a device.
+  fields:
+    device_id:
+      name: Device
+      description: Home Assistant device registered under Grandstream GDMS.
+      selector:
+        device:
+          integration: grandstream_gdms
+    mac:
+      name: MAC Address
+      description: Device MAC address (e.g., 00:0B:82:XX:XX:XX).
+      example: "00:0B:82:AA:BB:CC"
+      selector:
+        text:
+
+add_task:
+  name: Add GDMS Task
+  description: Create a custom GDMS OpenAPI device task (/oapi/v1.0.0/task/add).
+  fields:
+    mac_list:
+      name: MAC Addresses
+      description: List of target device MAC addresses.
+      required: true
+      example:
+        - "00:0B:82:AA:BB:CC"
+      selector:
+        object:
+    task_type:
+      name: Task Type
+      description: GDMS task type ID (1 = Reboot, 2 = Firmware Upgrade, 3 = Configuration Push).
+      required: true
+      default: 1
+      selector:
+        number:
+          min: 1
+          max: 20
+          mode: box
+    task_name:
+      name: Task Name
+      description: Descriptive task name shown in the GDMS task queue.
+      required: true
+      example: "HA_SCHEDULED_TASK"
+      selector:
+        text:
+    exec_type:
+      name: Execution Type
+      description: Execution mode (1 = Immediate).
+      default: 1
+      selector:
+        number:
+          min: 1
+          max: 5
+          mode: box
